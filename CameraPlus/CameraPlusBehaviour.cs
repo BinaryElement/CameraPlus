@@ -242,10 +242,10 @@ namespace CameraPlus
 			}
 
 			transform.position = Vector3.Lerp(transform.position, camera.position,
-				Plugin.Instance.Config.positionSmooth * Time.deltaTime);
+				Plugin.Instance.Config.positionSmooth * Time.unscaledDeltaTime);
 			
 			transform.rotation = Quaternion.Slerp(transform.rotation, camera.rotation,
-				Plugin.Instance.Config.rotationSmooth * Time.deltaTime);
+				Plugin.Instance.Config.rotationSmooth * Time.unscaledDeltaTime);
 		}
 
 		protected virtual void SetFOV()
